@@ -1,7 +1,6 @@
 // this needs to update everytime you make any changes
 const CACHE_NAME = 'my-cache-v0.1.1';
 const urlsToCache = [
-  '/',
   '/index.html',
   '/favicon.ico'
 ];
@@ -9,7 +8,10 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        console.log('here')
+        cache.addAll(urlsToCache)
+      })
   );
 });
 
