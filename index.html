@@ -13,18 +13,44 @@
         <input type="checkbox" id="todo" />
         <label for="todo">Buy milk</label><br />
         <input type="text" placeholder="add todo" />
-        <button>add</button>
+        <button type="button">add</button>
       </form>
-      <h4>cons</h4>
+      <h4>limitation</h4>
       <ul>
         <li>can't add new todo</li>
         <li>state is lost as soon as page is refreshed</li>
       </ul>
-      <h4>when to use</h4>
+      <h4>best for</h4>
       <ul>
-        <li>blogs. when you have more text/img</li>
-        <li>less user interactivity</li>
+        <li>blogs</li>
+        <li>apps which have minimum user interactivity</li>
       </ul>
+    </section>
+
+    <section class="border">
+      <link rel="stylesheet" href="style.css" type="text/css" />
+      <h3>HTML + JS</h3>
+      <form id="todo-form">
+        <input type="checkbox" id="todo" />
+        <label for="todo">Buy milk</label><br />
+        <input id="todo-text" type="text" placeholder="add todo" />
+        <button type="button" onclick="addTodo()">add</button>
+      </form>
+      <script>
+        const addTodo = () => {
+          const newTodo = document.getElementById("todo-text").value;
+          const newCheckboxEl = document.createElement("input");
+          newCheckboxEl.setAttribute("type", "checkbox");
+          const newLabelEl = document.createElement("label");
+          newLabelEl.innerText = newTodo;
+          document
+            .getElementById("todo-form")
+            .insertBefore(newCheckboxEl, document.getElementById("todo-text"));
+          document
+            .getElementById("todo-form")
+            .insertBefore(newLabelEl, document.getElementById("todo-text"));
+        };
+      </script>
     </section>
   </body>
 </html>
