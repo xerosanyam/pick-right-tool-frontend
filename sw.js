@@ -1,5 +1,5 @@
 // this needs to update everytime you make any changes
-const CACHE_NAME = 'my-cache-v0.1.1';
+const CACHE_NAME = 'my-cache-v0.1.2';
 const urlsToCache = [
   '/', // this is important. without this it doesn't work
   '/index.html',
