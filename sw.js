@@ -1,7 +1,8 @@
 const CACHE_NAME = 'my-cache-v0';
 const urlsToCache = [
   '/',
-  '/index.html'
+  '/index.html',
+  '/favicon.ico'
 ];
 
 self.addEventListener('install', event => {
